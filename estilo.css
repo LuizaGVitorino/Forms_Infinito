@@ -4,6 +4,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: center;
 }
 
 form{
@@ -31,14 +32,77 @@ input {
 
 }
 
+.checkbox {
+    display: flex;            /* Flexbox para alinhar os itens na mesma linha */
+    align-items: center;      /* Alinha verticalmente os itens no centro */
+    justify-content: flex-start; /* Alinha à esquerda (você pode mudar para flex-end ou center se quiser) */
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 0px; /* Adiciona um espaço entre o checkbox e o texto */
+}
+
+
 button{
     background: #733944;
     color: white;
     padding: 15px 10px;
     border: none;
+    font-size: medium;
 }
 
 button:hover{
    background: #A28B64;
     cursor: pointer;
+}
+
+/* Adicione estas classes ao seu arquivo estilo.css existente */
+
+.painel {
+    width: 500px;
+    max-width: 90%;
+    background: #F1ECDE;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #733944;
+    margin: 20px auto;
+}
+
+.info-usuario {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.info-usuario p {
+    margin: 10px 0;
+}
+
+.jogo-sorte {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.numero-sorte {
+    background: #733944;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.logout {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #733944;
+    text-decoration: none;
+}
+
+.logout:hover {
+    text-decoration: underline;
 }
