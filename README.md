@@ -12,7 +12,7 @@ Aqui você encontrará tudo sobre como desenvolvi o formulário de inscrição d
 - [Contribuição](#contributing)
 
 ## Inicialização
-1. Para que você possa abrir o projeto, acesse (link do site)
+1. Para que você possa abrir o projeto, acesse http://localhost/formulario/
 
 ## Usabilidade
 - Esse projeto foi desenvolvido com a intenção de divulgar um formulário de inscrição de um sorteio exclusivamente para a loja Infinito.
