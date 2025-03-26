@@ -1,0 +1,44 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 400px; /* Ajuste o tamanho conforme necessário */
+    max-width: 100%; /* Para garantir que o formulário não ultrapasse a largura da tela */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #733944;
+    background: #F1ECDE;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid;
+    
+}
+
+input {
+    font: optional;
+    width: 95%;
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+
+
+}
+
+button{
+    background: #733944;
+    color: white;
+    padding: 15px 10px;
+    border: none;
+}
+
+button:hover{
+   background: #A28B64;
+    cursor: pointer;
+}

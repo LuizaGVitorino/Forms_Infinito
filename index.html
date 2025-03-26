@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscrição</title>
+
+<link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+
+    <form action="processar-dados.php" method="post">
+
+        <label for="nome">Nome Completo:</label>
+        <input type="text" name="nome" placeholder="Digite seu nome completo" required>
+
+        <label for="email">E-Mail:</label>
+        <input type="email" name="email" placeholder="Digite seu e-mail" required>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" placeholder="Insira seu CPF" required>
+
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" placeholder="Insira seu CEP" required>
+
+        <label for="celular">Celular:</label>
+        <input type="text" name="celular" placeholder="DDD + Número de Celular" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
