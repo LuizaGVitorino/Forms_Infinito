@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sorteio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ola mundo</h1>
+    <div class="container">
+        <h2>Gire para sortear seu número da sorte!</h2>
+        <div id="numero-sorte">0000</div>
+        <button id="btn-sortear">STOP</button>
+    </div>
+
+    <script>
+        let intervalo;
+        let sorteado = false;
+        document.getElementById('btn-sortear').addEventListener('click', function () {
+            if (!sorteado) {
+                clearInterval(intervalo);
+                sorteado = true;
+                let numeroSorte = document.getElementById('numero-sorte').innerText;
+                fetch('backend/salva_sorteio.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: 'numero=' + numeroSorte
+                });
+            }
+        });
+
+        function iniciarSorteio() {
+            intervalo = setInterval(() => {
+                document.getElementById('numero-sorte').innerText = Math.floor(1000 + Math.random() * 9000);
+            }, 100);
+        }
+
+        iniciarSorteio();
+    </script>
 </body>
 </html>
