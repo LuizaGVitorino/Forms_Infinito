@@ -1,63 +1,86 @@
-body{
+/* ==================== */
+/* ESTILOS GERAIS */
+/* ==================== */
+body {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: center;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-form{
-    width: 400px; /* Ajuste o tamanho conforme necessário */
-    max-width: 100%; /* Para garantir que o formulário não ultrapasse a largura da tela */
-    font-family: Arial, Helvetica, sans-serif;
+/* ==================== */
+/* FORMULÁRIO PRINCIPAL */
+/* ==================== */
+form {
+    width: 400px;
+    max-width: 95%;
     color: #733944;
     background: #F1ECDE;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     padding: 40px;
     border-radius: 10px;
-    border: 1px solid;
-    
+    border: 1px solid #733944;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 input {
-    font: optional;
     width: 95%;
     height: 20px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0;
     padding: 10px;
-
-
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
+input:focus {
+    outline: none;
+    border-color: #A28B64;
+}
+
+/* ==================== */
+/* CHECKBOX PERSONALIZADO */
+/* ==================== */
 .checkbox {
-    display: flex;            /* Flexbox para alinhar os itens na mesma linha */
-    align-items: center;      /* Alinha verticalmente os itens no centro */
-    justify-content: flex-start; /* Alinha à esquerda (você pode mudar para flex-end ou center se quiser) */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
 }
 
 .checkbox input[type="checkbox"] {
-    margin-right: 0px; /* Adiciona um espaço entre o checkbox e o texto */
+    width: auto;
+    margin-right: 10px;
+    height: auto;
 }
 
-
-button{
+/* ==================== */
+/* BOTÕES */
+/* ==================== */
+button {
     background: #733944;
     color: white;
     padding: 15px 10px;
     border: none;
     font-size: medium;
-}
-
-button:hover{
-   background: #A28B64;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
 }
 
-/* Adicione estas classes ao seu arquivo estilo.css existente */
+button:hover {
+    background: #A28B64;
+}
 
+/* ==================== */
+/* PAINEL DO USUÁRIO */
+/* ==================== */
 .painel {
     width: 500px;
     max-width: 90%;
@@ -66,6 +89,7 @@ button:hover{
     border-radius: 10px;
     border: 1px solid #733944;
     margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .info-usuario {
@@ -73,18 +97,24 @@ button:hover{
     padding: 15px;
     border-radius: 5px;
     margin: 20px 0;
+    border: 1px solid #ddd;
 }
 
 .info-usuario p {
     margin: 10px 0;
+    line-height: 1.5;
 }
 
+/* ==================== */
+/* JOGO DA SORTE */
+/* ==================== */
 .jogo-sorte {
     background: white;
     padding: 15px;
     border-radius: 5px;
     margin: 20px 0;
     text-align: center;
+    border: 1px solid #ddd;
 }
 
 .numero-sorte {
@@ -93,16 +123,117 @@ button:hover{
     padding: 10px;
     border-radius: 5px;
     margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
+/* ==================== */
+/* LINKS */
+/* ==================== */
 .logout {
     display: block;
     text-align: center;
     margin-top: 20px;
     color: #733944;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .logout:hover {
     text-decoration: underline;
+}
+
+/* ==================== */
+/* MODO DESENVOLVEDOR */
+/* ==================== */
+.dev-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #733944;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.dev-panel a {
+    color: #733944;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dev-panel a:hover {
+    text-decoration: underline;
+}
+
+.dev-notice {
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* ==================== */
+/* BANNER DE DESENVOLVIMENTO */
+/* ==================== */
+.dev-banner {
+    background-color: #fffde7;
+    border-left: 4px solid #ffd600;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.dev-banner a {
+    color: #733944;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dev-banner a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== */
+/* RESPONSIVIDADE */
+/* ==================== */
+@media (max-width: 480px) {
+    form, .painel {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    input {
+        width: 92%;
+    }
+    
+    .dev-panel {
+        font-size: 12px;
+    }
+    
+    .dev-panel a {
+        margin: 0 5px;
+    }
+}
+
+.historico-sorte {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.historico-sorte ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.historico-sorte li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
 }

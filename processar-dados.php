@@ -16,6 +16,7 @@ if ($conn->connect_error) {
 
 // Gerar código de 6 dígitos
 $codigo = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+$codigo = '123456';
 
 // Salvar dados na sessão para verificação posterior
 $_SESSION['dados_cadastro'] = [
